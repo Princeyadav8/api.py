@@ -9,7 +9,9 @@ import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
 app = Flask(__name__)
-
+@app.route("/")
+def home():
+    return "API is running 🚀"
 # ============ CONFIGURATION ============
 API_KEY = "Rohon@8830"
 MAX_WORKERS = 500  # 500 threads ek saath
